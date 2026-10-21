@@ -1,0 +1,31 @@
+{
+  "rows": 1340000,
+  "vms": 10000,
+  "timestamps": 134,
+  "first_source_second": 0,
+  "last_source_second": 39900,
+  "cadence_seconds": 300,
+  "invalid_avg_cpu_rows": 0,
+  "duplicate_pairs": 0,
+  "metadata_rows": 10000,
+  "missing_by_column": {
+    "timestamp": 0,
+    "vm_id": 0,
+    "min_cpu": 0,
+    "max_cpu": 0,
+    "avg_cpu": 0
+  },
+  "invalid_min_max_rows": 0,
+  "observations_per_vm": {
+    "count": 10000.0,
+    "mean": 134.0,
+    "std": 0.0,
+    "min": 134.0,
+    "25%": 134.0,
+    "50%": 134.0,
+    "75%": 134.0,
+    "max": 134.0
+  },
+  "missing_vm_grid_readings": 0,
+  "training_points": 110
+}

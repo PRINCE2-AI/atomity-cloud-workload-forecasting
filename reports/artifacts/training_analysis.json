@@ -1,0 +1,42 @@
+{
+  "cpu_quantiles": {
+    "0.0": 0.0071589216268651,
+    "0.1": 1.2348014199087254,
+    "0.5": 5.119809152561594,
+    "0.9": 19.691118594608653,
+    "0.95": 37.293248468366095,
+    "0.99": 87.40634736453232,
+    "1.0": 99.48802665399457
+  },
+  "zero_cpu_fraction": 0.0,
+  "over_80_cpu_fraction": 0.012720909090909092,
+  "active_count_min": 10000,
+  "active_count_max": 10000,
+  "aggregate_cpu_mean": 9.414089019539007,
+  "aggregate_cpu_std": 0.19356833547362817,
+  "aggregate_cpu_min": 9.111633601754887,
+  "aggregate_cpu_max": 9.912175173984913,
+  "aggregate_lag1_autocorrelation": 0.6672358236125618,
+  "observed_population_additions": 0,
+  "observed_population_departures": 0,
+  "timestamp_vm_created_summary": {
+    "count": 10000.0,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "25%": 0.0,
+    "50%": 0.0,
+    "75%": 0.0,
+    "max": 0.0
+  },
+  "timestamp_vm_deleted_summary": {
+    "count": 10000.0,
+    "mean": 2289625.62,
+    "std": 708100.8340418282,
+    "min": 40500.0,
+    "25%": 2591400.0,
+    "50%": 2591400.0,
+    "75%": 2591400.0,
+    "max": 2591400.0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "selected": {
+    "active_vm_count": "last",
+    "aggregate_cpu_utilization": "ar_ridge"
+  },
+  "candidate_order": [
+    "last",
+    "mean6",
+    "mean12",
+    "mean24",
+    "ses02",
+    "ses05",
+    "damped",
+    "ar_ridge"
+  ],
+  "selection_metric": "mean validation MAE; simpler candidate breaks ties",
+  "origins": [
+    38,
+    62,
+    86
+  ],
+  "horizon": 24,
+  "training_points": 110,
+  "last_training_timestamp": 32700,
+  "one_sided_residual_p95_margin": {
+    "active_vm_count": 0.0,
+    "aggregate_cpu_utilization": 0.42184220368238345
+  },
+  "upstream_starter_commit": "6e5ac0e4d2f1d81fab0903ce0a974037745db35b",
+  "checksums": {
+    "vm_cpu_readings.csv.gz": "f961964e51f2250534a1273ce8b5aec76816b1ef9628d6356daad0f5af345440",
+    "vm_metadata.csv.gz": "acc07b52b3757d0c62628fea9cc988933aac93c48d40a8e4a527a15c10e1334b",
+    "DATA_CARD.md": "3ae8a73f19243ee57e49b8bb94ca4baa4687a7cb4b12ae8326026bb84f547e43"
+  }
+}

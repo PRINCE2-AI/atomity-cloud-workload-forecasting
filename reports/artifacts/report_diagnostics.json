@@ -1,0 +1,7 @@
+{
+  "validation_peak_points": 16,
+  "validation_peak_mae": 0.27990710150628306,
+  "validation_mean_mae": 0.17097542458094775,
+  "baseline_validation_mean_mae": 0.2081979578310074,
+  "holdout_mae_improvement_percent": 32.73229395309782
+}

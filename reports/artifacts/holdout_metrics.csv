@@ -1,0 +1,5 @@
+target,model,mae,rmse,bias,peak_threshold_training_p90,peak_points,peak_mae,max_underprediction,buffer_exceedance_fraction,mae_relative_to_persistence,mae_improvement_percent,relative_metric_note
+active_vm_count,selected,0.0,0.0,0.0,10000.0,24,0.0,0.0,0.0,,,undefined: persistence MAE is zero; compare absolute errors
+active_vm_count,last_baseline,0.0,0.0,0.0,10000.0,24,0.0,0.0,0.0,,,undefined: persistence MAE is zero; compare absolute errors
+aggregate_cpu_utilization,selected,0.09873719314972103,0.12028634965056678,0.03011056456251156,9.668361517488389,0,,0.3021917927898574,0.0,0.672677060469022,32.7322939530978,defined
+aggregate_cpu_utilization,last_baseline,0.1467824591504233,0.18478539074333666,-0.10443155806626603,9.668361517488389,0,,0.4714340337064922,0.041666666666666664,1.0,0.0,defined
