@@ -1,0 +1,14 @@
+{
+  "clean_reproduction_identical": true,
+  "prediction_sha256": "e876bba8d4e800d79da2b6fe867ab5fb19380055f68cada779971fdbaf2d269c",
+  "rows": 24,
+  "first_rows": [
+    "timestamp,active_vm_count,aggregate_cpu_utilization\r",
+    "33000,10000.0,9.188979247058608\r",
+    "33300,10000.0,9.20349931254292\r",
+    "33600,10000.0,9.203356237946108\r"
+  ],
+  "last_row": "39900,10000.0,9.3633011665826",
+  "tests_passed": 20,
+  "report_pages": 5
+}
