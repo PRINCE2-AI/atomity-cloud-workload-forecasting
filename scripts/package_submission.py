@@ -13,7 +13,7 @@ def main():
     for path in ROOT.rglob('*'):
         rel=path.relative_to(ROOT)
         if not path.is_file() or any(part in excluded or part.endswith('.egg-info') for part in rel.parts):continue
-        if path.name in {'.project.json','data-v1.tar.gz'}:continue
+        if path.name in {'.project.json','data-v1.tar.gz','SUBMISSION_SHA256.json'}:continue
         if rel.parts[0]=='challenge_data' and path.name!='README.md':continue
         files.append(path)
     manifest={str(p.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
