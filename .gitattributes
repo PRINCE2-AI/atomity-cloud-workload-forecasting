@@ -1,0 +1,10 @@
+# Byte-exact artifacts: SUBMISSION_SHA256.json hashes the committed bytes.
+* text=auto eol=lf
+predictions.csv -text
+requirements-lock.txt -text
+reports/final_report.md -text
+reports/final_report.html -text
+reports/artifacts/** -text
+*.pdf binary
+*.png binary
+*.gz binary

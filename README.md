@@ -1,5 +1,7 @@
 # Cloud workload forecasting — Prince Maurya
 
+[![CI](https://github.com/PRINCE2-AI/atomity-cloud-workload-forecasting/actions/workflows/ci.yml/badge.svg)](https://github.com/PRINCE2-AI/atomity-cloud-workload-forecasting/actions/workflows/ci.yml)
+
 A leakage-safe two-hour forecast for the fixed Atomity `data-v1` Azure VM subset. The solution selects persistence for the represented VM count and a six-lag ridge autoregression for average CPU. Selection uses only the first 110 aggregate observations. The final 24 labels are evaluated only after selection and prediction generation.
 
 ## Reproduce from a clean checkout
@@ -18,6 +20,8 @@ python scripts/download_data.py
 python -m pytest -q
 python run.py --data challenge_data --output predictions.csv
 ```
+
+On every push and pull request, CI installs `requirements-lock.txt`, runs the test suite on Python 3.12, and verifies every file listed in `SUBMISSION_SHA256.json`.
 
 The last line is the single prediction-generation command. It verifies the release hashes, audits inputs, constructs targets, runs temporal model selection, writes predictions, and creates analysis/results/figures. No manual editing of predictions is needed. `run.py` imports the local `src/` implementation, so an editable package installation is unnecessary. `pyproject.toml` also supports ordinary package installation outside this sandbox. A sandbox-specific setuptools editable-build failure was avoided using this portable entry point.
 

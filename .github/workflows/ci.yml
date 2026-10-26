@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-lock.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Verify submission hashes
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import sys
+
+          manifest = json.loads(pathlib.Path("SUBMISSION_SHA256.json").read_text())
+          mismatched = [
+              path
+              for path, expected in manifest.items()
+              if hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest() != expected
+          ]
+          if mismatched:
+              sys.exit(f"hash mismatch: {mismatched}")
+          print(f"verified {len(manifest)} files")
+          PY
